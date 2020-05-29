@@ -14,7 +14,7 @@ This tool is to be used with Grey Matter Service Mesh
 
 ## Install
 
-`make install`
+`brew install greymatter-io/greymatter/gmcat`
 
 ## Configure
 
