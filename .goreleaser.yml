@@ -1,0 +1,44 @@
+# This is an example goreleaser.yaml file with some sane defaults.
+# Make sure to check the documentation at http://goreleaser.com
+before:
+  hooks:
+    # You may remove this if you don't use go modules.
+    - go mod download
+    # you may remove this if you don't need go generate
+    - go generate ./...
+builds:
+  - 
+    id: "gm-cat"
+    binary: gmcat
+    env:
+      - CGO_ENABLED=0
+
+    ldflags:
+      - -X "local.only/gmcat/cmd.Version={{.Env.VERSION}}"
+
+archives:
+  - replacements:
+      386: i386
+      amd64: x86_64
+
+release:
+  github:
+    owner: greymatter-io
+    name: gmcat
+  draft: false
+  prerelease: false
+  # ids:
+  #   - dist/gm-cat_darwin_amd64/gmcat
+  #   - dist/gm-cat_linux_amd64/gmcat
+  
+
+brews:
+  - name: gmcat
+    github:  
+      owner: greymatter-io
+      name: homebrew-greymatter
+    folder: Formula
+    description: "GmCat is a tool to interact with The GreyMatter Service Mesh's Catalog"
+    homepage: https://github.com/greymatter-io/gmcat
+    test: |
+      system "#{bin}/gmcat version"

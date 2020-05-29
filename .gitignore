@@ -1,0 +1,9 @@
+certs/*
+json_config/*
+
+k3d.source
+environment.local
+
+# dont check in binary
+gmcat 
+dist/

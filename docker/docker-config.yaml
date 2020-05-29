@@ -1,0 +1,15 @@
+# Input absolute path to the certs
+PFX_PATH: "app/certs/quickstart.p12"
+PFX_PASSWORD: "password"
+SERVER_NAME: ""
+
+# Url to reach Grey Matter Dashboard
+EDGE: "https://localhost:30000"
+# Endpoint to hit catalog api
+CATALOG: "/services/catalog/latest"
+USER_DN: "CN=quickstart,OU=Engineering,O=Decipher Technology Studios,L=Alexandria,ST=Virginia,C=US"
+
+# Location of the json config files that will configure the service mesh
+JSON_CONFIG_PATH: "app/json_config"
+# What catalog are named.
+CATALOG_FILE_NAME: "06.catalog.json"
