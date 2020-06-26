@@ -20,6 +20,8 @@ const (
 	Catalog string = "CATALOG"
 	Userdn  string = "USER_DN"
 
+	GreymatterApiPrefix string = "GREYMATTER_API_PREFIX"
+
 	JsonConfigPath  string = "JSON_CONFIG_PATH"
 	CatalogFileName string = "CATALOG_FILE_NAME"
 )
@@ -41,6 +43,8 @@ func NewVars() (v Vars) {
 		Edge:    "https://localhost:30000",
 		Catalog: "/services/catalog/latest",
 		Userdn:  "CN=quickstart,OU=Engineering,O=Decipher Technology Studios,L=Alexandria,ST=Virginia,C=US",
+
+		GreymatterApiPrefix: "/services/gm-control-api/latest/v1.0",
 
 		JsonConfigPath:  "/Users/kyleg/Documents/new-scripts/json_config",
 		CatalogFileName: "06.catalog.json",

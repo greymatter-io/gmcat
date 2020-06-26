@@ -24,6 +24,7 @@ var addUpdate = &cobra.Command{
 func init() {
 	rootCmd.AddCommand(addUpdate)
 	addUpdate.Flags().StringVarP(&directory, "file", "f", "", "-f <directory name>: pass the directory the catalog defn is located in")
+	addUpdate.Flags().StringVarP(&nobackup, "no backup file", "nb", "", "-nb: no backupfile is left")
 }
 
 func Update() {
